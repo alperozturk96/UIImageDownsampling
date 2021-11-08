@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="UIImageDownsampling" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadImage" translatesAutoresizingMaskIntoConstraints="NO" id="oW8-bn-83M">
+                                <rect key="frame" x="20" y="344" width="374" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Jpi-Ha-G9D"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GoB-J8-yp6">
+                                <rect key="frame" x="50" y="604" width="314" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Dvg-qm-fGy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pick Image"/>
+                                <connections>
+                                    <action selector="pickImage" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRR-2m-rLm"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkG-VA-Ifo" userLabel="rawSize">
+                                <rect key="frame" x="15" y="744" width="384" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zv5-Ht-gpD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="eky-VZ-o2I">
+                                <rect key="frame" x="15" y="84" width="384" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9JB-gw-v6U"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compression Level" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PcO-bx-jgW">
+                                <rect key="frame" x="130" y="44" width="154.5" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BfL-mn-rG5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="lj5-pZ-k4H" userLabel="QualityPickerView">
+                                <rect key="frame" x="15" y="224" width="384" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ten-yi-Uh6"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interpolation Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="269-Tc-BGi">
+                                <rect key="frame" x="123.5" y="184" width="167" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="are-qJ-zxq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eky-VZ-o2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="1To-dG-3lf"/>
+                            <constraint firstItem="GoB-J8-yp6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="4jd-oN-puc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oW8-bn-83M" secondAttribute="trailing" constant="20" id="BOn-UP-YsT"/>
+                            <constraint firstItem="oW8-bn-83M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Gzd-wI-7HO"/>
+                            <constraint firstItem="lj5-pZ-k4H" firstAttribute="top" secondItem="269-Tc-BGi" secondAttribute="bottom" id="HiX-Hq-kXF"/>
+                            <constraint firstItem="TkG-VA-Ifo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="PQx-9V-A9f"/>
+                            <constraint firstItem="eky-VZ-o2I" firstAttribute="top" secondItem="PcO-bx-jgW" secondAttribute="bottom" id="QJR-s3-u9G"/>
+                            <constraint firstItem="TkG-VA-Ifo" firstAttribute="top" secondItem="GoB-J8-yp6" secondAttribute="bottom" constant="100" id="Rj6-cd-3YF"/>
+                            <constraint firstItem="GoB-J8-yp6" firstAttribute="top" secondItem="oW8-bn-83M" secondAttribute="bottom" constant="20" id="Y0P-mv-fX5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eky-VZ-o2I" secondAttribute="trailing" constant="15" id="Z9c-FU-ZKs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lj5-pZ-k4H" secondAttribute="trailing" constant="15" id="bnb-Q2-obi"/>
+                            <constraint firstItem="PcO-bx-jgW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dtD-PD-FY9"/>
+                            <constraint firstItem="lj5-pZ-k4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="eUB-Se-OXW"/>
+                            <constraint firstItem="269-Tc-BGi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="plR-zf-Un4"/>
+                            <constraint firstItem="oW8-bn-83M" firstAttribute="top" secondItem="lj5-pZ-k4H" secondAttribute="bottom" constant="20" id="qIA-k9-Wwn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GoB-J8-yp6" secondAttribute="trailing" constant="50" id="tO4-MS-JYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TkG-VA-Ifo" secondAttribute="trailing" constant="15" id="tQW-8x-Zqb"/>
+                            <constraint firstItem="PcO-bx-jgW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tei-rJ-f4s"/>
+                            <constraint firstItem="269-Tc-BGi" firstAttribute="top" secondItem="eky-VZ-o2I" secondAttribute="bottom" id="veG-GW-Byv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="compressionPickerView" destination="eky-VZ-o2I" id="uQn-mc-hXf"/>
+                        <outlet property="compressionQualityPickerView" destination="lj5-pZ-k4H" id="Pgo-bh-mio"/>
+                        <outlet property="downsampledPreviewImageView" destination="oW8-bn-83M" id="ozC-yV-fbH"/>
+                        <outlet property="resultLabel" destination="TkG-VA-Ifo" id="oCO-0b-Rd1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="124"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loadImage" width="986" height="1394"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
